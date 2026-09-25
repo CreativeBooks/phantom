@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://drfh0ggokn8ut"]
+
+[ext_resource type="Script" uid="uid://oa315jfse87h" path="res://Misc Scenes/story.gd" id="1_4nfae"]
+[ext_resource type="FontFile" uid="uid://drcq1rx761xsw" path="res://Fonts/Orbitron/static/Orbitron-Bold.ttf" id="1_bwkhw"]
+[ext_resource type="FontFile" uid="uid://d30us47r5vr8q" path="res://Fonts/Teko/Teko-VariableFont_wght.ttf" id="2_4nfae"]
+[ext_resource type="FontFile" uid="uid://cbwon5vgw6g2x" path="res://Fonts/Teko/static/Teko-Medium.ttf" id="3_4ukgh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s70ul"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7v7q"]
+bg_color = Color(0.0006938975, 0.0006938978, 0.00069389684, 1)
+
+[node name="Story" type="Node2D" unique_id=1614361031]
+script = ExtResource("1_4nfae")
+
+[node name="Label" type="Label" parent="." unique_id=1263528212]
+offset_left = 32.0
+offset_top = 30.0
+offset_right = 601.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0.101960786, 0.13333334, 0.21960784, 1)
+theme_override_fonts/font = ExtResource("1_bwkhw")
+theme_override_font_sizes/font_size = 92
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s70ul")
+text = "THE MISSION:"
+
+[node name="Label2" type="Label" parent="." unique_id=475175953]
+offset_left = 43.0
+offset_top = 161.0
+offset_right = 1076.0
+offset_bottom = 454.0
+theme_override_fonts/font = ExtResource("2_4nfae")
+theme_override_font_sizes/font_size = 32
+text = "You are a master thief, and in recognition, you are invited to the world’s first thieving convention! When you arrive, 
+you are told that everyone must leave all of their belongings at the front, and then, suddenly, everything goes black.
+When you come to, you are in an empty room. All alone. All of sudden, there is a voice echoing in the room: “You have 10 
+minutes to solve the riddles, get the golden lockpick, and escape. Good luck.” "
+
+[node name="next" type="Button" parent="." unique_id=559776914]
+offset_left = 595.0
+offset_top = 465.0
+offset_right = 915.0
+offset_bottom = 531.0
+theme_override_fonts/font = ExtResource("2_4nfae")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_s7v7q")
+text = "Why not! →"
+
+[node name="end" type="Button" parent="." unique_id=1673282324]
+offset_left = 254.0
+offset_top = 465.0
+offset_right = 574.0
+offset_bottom = 531.0
+theme_override_fonts/font = ExtResource("2_4nfae")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_s7v7q")
+text = "← No thanks!"
+
+[node name="Label3" type="Label" parent="." unique_id=626158032]
+offset_left = 402.0
+offset_top = 384.0
+offset_right = 775.0
+offset_bottom = 429.0
+theme_override_fonts/font = ExtResource("3_4ukgh")
+theme_override_font_sizes/font_size = 31
+text = "What do you say, up for the challege?"
+
+[connection signal="pressed" from="end" to="." method="_on_end_pressed"]

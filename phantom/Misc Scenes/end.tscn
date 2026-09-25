@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://wxojlgwc1660"]
+
+[ext_resource type="Script" uid="uid://pt8dpccipauj" path="res://Misc Scenes/end.gd" id="1_75yvt"]
+[ext_resource type="FontFile" uid="uid://cbwon5vgw6g2x" path="res://Fonts/Teko/static/Teko-Medium.ttf" id="1_lt2ag"]
+[ext_resource type="FontFile" uid="uid://drcq1rx761xsw" path="res://Fonts/Orbitron/static/Orbitron-Bold.ttf" id="2_75yvt"]
+[ext_resource type="FontFile" uid="uid://d30us47r5vr8q" path="res://Fonts/Teko/Teko-VariableFont_wght.ttf" id="3_jclhh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3e5g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6pt3"]
+bg_color = Color(0.0006938975, 0.0006938978, 0.00069389684, 1)
+
+[node name="End" type="Node2D" unique_id=1201428852]
+script = ExtResource("1_75yvt")
+
+[node name="Label3" type="Label" parent="." unique_id=851887978]
+offset_left = 460.0
+offset_top = 301.0
+offset_right = 668.0
+offset_bottom = 346.0
+theme_override_fonts/font = ExtResource("1_lt2ag")
+theme_override_font_sizes/font_size = 31
+text = "Ready to re-claim?"
+
+[node name="Label" type="Label" parent="." unique_id=1344022214]
+offset_left = 198.0
+offset_top = 28.0
+offset_right = 896.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(0.101960786, 0.13333334, 0.21960784, 1)
+theme_override_fonts/font = ExtResource("2_75yvt")
+theme_override_font_sizes/font_size = 92
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m3e5g")
+text = "MISSION FAIL"
+
+[node name="Label2" type="Label" parent="." unique_id=259004621]
+offset_left = 41.0
+offset_top = 173.0
+offset_right = 1074.0
+offset_bottom = 276.0
+theme_override_fonts/font = ExtResource("3_jclhh")
+theme_override_font_sizes/font_size = 32
+text = "You weren't able to acquire the golden lockpick. Unfortunately, that means that your title as \"Master Theif\" is revoked.
+If you want a chance at re-claiming it, restart the entire escape, beat the timer, and return with the prize!"
+
+[node name="restart" type="Button" parent="." unique_id=399826253]
+offset_left = 569.0
+offset_top = 384.0
+offset_right = 889.0
+offset_bottom = 450.0
+theme_override_fonts/font = ExtResource("3_jclhh")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_u6pt3")
+text = "Yes! →"
+
+[node name="end" type="Button" parent="." unique_id=310255238]
+offset_left = 228.0
+offset_top = 384.0
+offset_right = 548.0
+offset_bottom = 450.0
+theme_override_fonts/font = ExtResource("3_jclhh")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_u6pt3")
+text = "← Not worth it."
+
+[connection signal="pressed" from="end" to="." method="_on_end_pressed"]

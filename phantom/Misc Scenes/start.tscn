@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://crc6luroexjs7"]
+
+[ext_resource type="Script" uid="uid://nofds6dskwww" path="res://Misc Scenes/start.gd" id="1_1n0d2"]
+[ext_resource type="FontFile" uid="uid://drcq1rx761xsw" path="res://Fonts/Orbitron/static/Orbitron-Bold.ttf" id="1_qn1rc"]
+[ext_resource type="FontFile" uid="uid://d30us47r5vr8q" path="res://Fonts/Teko/Teko-VariableFont_wght.ttf" id="2_1n0d2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qn1rc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5hus"]
+bg_color = Color(0.0006938975, 0.0006938978, 0.00069389684, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1333101884]
+script = ExtResource("1_1n0d2")
+
+[node name="Label" type="Label" parent="." unique_id=1287657927]
+offset_left = 147.0
+offset_top = 87.0
+offset_right = 996.0
+offset_bottom = 301.0
+theme_override_colors/font_color = Color(0.101960786, 0.13333334, 0.21960784, 1)
+theme_override_fonts/font = ExtResource("1_qn1rc")
+theme_override_font_sizes/font_size = 170
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qn1rc")
+text = "Lockpick"
+
+[node name="options" type="Button" parent="." unique_id=255044619]
+offset_left = 243.0
+offset_top = 342.0
+offset_right = 563.0
+offset_bottom = 408.0
+theme_override_fonts/font = ExtResource("2_1n0d2")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_y5hus")
+text = "Options"
+
+[node name="HowtoPlay" type="Button" parent="." unique_id=1198367490]
+offset_left = 580.0
+offset_top = 342.0
+offset_right = 900.0
+offset_bottom = 408.0
+theme_override_fonts/font = ExtResource("2_1n0d2")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_y5hus")
+text = "How to Play"
+
+[node name="Start" type="Button" parent="." unique_id=165279244]
+offset_left = 243.0
+offset_top = 422.0
+offset_right = 901.0
+offset_bottom = 488.0
+theme_override_fonts/font = ExtResource("2_1n0d2")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_y5hus")
+text = "Start"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
